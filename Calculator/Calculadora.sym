@@ -1,0 +1,166 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     tecla
+005-008 MAIN.numero
+009-00C MAIN.resultado
+00D     MAIN.operacion
+00E     MAIN.operacion2
+00F     lcd_init.i
+00F-012 @DIVFF.P1
+00F-012 @FLT.P2
+00F-010 solicitarNumero.operacion
+00F-012 @PRINTF_L32D_92FPFPF.P1
+00F     MAIN.@SCRATCH1
+00F     @PSTRINGC_92.@SCRATCH1
+010     lcd_init.@SCRATCH1
+010     @PSTRINGC_92.@SCRATCH2
+011-014 solicitarNumero.numero
+013     @PRINTF_L32D_92FPFPF.P1
+013-016 @FLT.P2
+013-016 @DIVFF.P3
+014     @PRINTF_L32D_92FPFPF.@SCRATCH1
+015     solicitarNumero.continuar
+015     @PRINTF_L32D_92FPFPF.@SCRATCH2
+016     kbd_getc.tecla
+016     solicitarNumero.@SCRATCH1
+016     @PRINTF_L32D_92FPFPF.@SCRATCH3
+017     kbd_getc.f
+017     solicitarNumero.@SCRATCH2
+017     @PRINTF_L32D_92FPFPF.@SCRATCH4
+017     @FLT.@SCRATCH1
+017     @DIVFF.@SCRATCH1
+018     kbd_getc.c
+018     solicitarNumero.@SCRATCH3
+018     @PRINTF_L32D_92FPFPF.@SCRATCH5
+018     @FLT.@SCRATCH2
+018     @DIVFF.@SCRATCH2
+019     kbd_getc.t
+019     solicitarNumero.@SCRATCH4
+019     @PRINTF_L32D_92FPFPF.@SCRATCH6
+019     @DIVFF.@SCRATCH3
+01A     kbd_getc.i
+01A-01D @ADDFF.P1
+01A-01B @ITOF.P2
+01A     @PRINTF_L32D_92FPFPF.@SCRATCH7
+01A     @DIVFF.@SCRATCH4
+01B     kbd_getc.j
+01B     @PRINTF_L32D_92FPFPF.@SCRATCH8
+01B     @DIVFF.@SCRATCH5
+01C-01F @DIV3232.P1
+01C-01F @FTOSD.P2
+01C     lcd_putc.c
+01C-01F @MULFF.P1
+01C     kbd_getc.@SCRATCH1
+01C     @DIVFF.@SCRATCH6
+01D     lcd_gotoxy.x
+01D     kbd_getc.@SCRATCH2
+01E-021 @ADDFF.P1
+01E     lcd_gotoxy.y
+01F     lcd_gotoxy.address
+020-023 @MULFF.P1
+020-023 @DIV3232.P2
+020     lcd_gotoxy.@SCRATCH1
+020     @FTOSD.@SCRATCH1
+021     lcd_send_byte.address
+022     lcd_send_byte.n
+022     @ADDFF.@SCRATCH1
+023     @delay_ms1.P1
+023     lcd_send_byte.@SCRATCH1
+023     @ADDFF.@SCRATCH2
+024     lcd_send_nibble.n
+024     @MULFF.@SCRATCH1
+024     @ADDFF.@SCRATCH3
+024     @DIV3232.@SCRATCH1
+025     @MULFF.@SCRATCH2
+025     @ADDFF.@SCRATCH4
+025     @DIV3232.@SCRATCH2
+026     @MULFF.@SCRATCH3
+026     @ADDFF.@SCRATCH5
+026     @DIV3232.@SCRATCH3
+027     @ADDFF.@SCRATCH6
+027     @DIV3232.@SCRATCH4
+028     @ADDFF.@SCRATCH7
+028     @DIV3232.@SCRATCH5
+029     @ADDFF.@SCRATCH8
+F81     lcd
+F83     PSP_DATA
+F83     kbd_port_d
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+003E  @delay_ms1
+0004  LCD_INIT_STRING
+0064  lcd_send_nibble
+007E  lcd_send_byte
+00AE  lcd_init
+02AC  lcd_gotoxy
+02D0  lcd_putc
+0018  KEYS
+048E  kbd_getc
+07C4  solicitarNumero
+00EC  @MULFF
+0522  @ITOF
+055A  @ADDFF
+0A8A  MAIN
+01DE  @FTOSD
+021E  @DIV3232
+0314  @PRINTF_L32D_92FPFPF
+0894  @FLT
+0038  @const140
+090C  @PSTRINGC_92
+092E  @DIVFF
+0A8A  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Griffith\Desktop\Calculadora\
+
+Project Files:
+    Calculadora.c
+    ..\..\..\..\Program Files\PICC\devices\18F4520.h
+    lcdeasy.c
+    KBD2.c
+
+Units:
+    C:\Users\Griffith\Desktop\Calculadora\Calculadora (main)
+
+Compiler Settings:
+    Processor:      PIC18F4520
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      Calculadora.err
+    Ext Symbols: Calculadora.esym
+    INHX32:      Calculadora.hex
+    Symbols:     Calculadora.sym
+    List:        Calculadora.lst
+    Debug/COFF:  Calculadora.cof
+    Project:     Calculadora.PJT
+    Call Tree:   Calculadora.tre
+    Statistics:  Calculadora.sta
